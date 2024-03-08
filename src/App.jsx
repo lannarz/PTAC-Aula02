@@ -1,10 +1,9 @@
-import Footer from "./Components/Footer";
-
+import Header from "./components/Header";
+import "./globals.css";
 export default function App() {
-  return (
-    <main>
-      <Footer/>
-    </main>
-  );
-
+    return(
+        <div>
+           <Header/>
+        </div>
+    );
 }
