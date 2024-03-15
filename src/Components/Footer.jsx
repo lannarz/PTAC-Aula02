@@ -10,7 +10,7 @@ export default function Footer(){
     
               <div className="descricoes">
                 <p>Termos • Politica de Privacidade</p>
-                <p id="transparente">© 2018 Direitos Autorais</p>
+                <p id="transparente">© Por Lanna Rizzo</p>
               </div>
             </div>
           
