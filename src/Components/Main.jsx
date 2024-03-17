@@ -7,7 +7,9 @@ export default function Main(){
     return(
       <main>
 
-        <div id="fundoInput">
+        <form>
+
+        <div id="fundoInput" className="classic">
         <label> Nome: 
             <input
             type="text"
@@ -17,23 +19,20 @@ export default function Main(){
             {nome}
         </label>
          
-
         <label> Telefone:
             <input
-            type="text"
+            type="tel"
             name="" id=""
             onChange={(event)=> setNumero(event.target.value)}
             />
             {numero}
             <button>Enviar</button>
         </label>
-       
-       
-
-
-
         </div>
-       
+          
+        </form>
+
+        
       </main>
     );
 }
