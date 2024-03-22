@@ -2,7 +2,8 @@ import { useState } from "react";
 
 export default function Main(){
   const[nome, setNome] = useState("") //(0) number  // (true) boolean
-  const[numero, setNumero] = useState(0) //(0) number  // (true) boolean
+  const[numero, setNumero] = useState(0)
+  const[email, setEmail] = useState("") 
   const[listaContatos, setListaContatos] = useState([])
 
   const registrar = (event) => {
@@ -11,6 +12,7 @@ export default function Main(){
     {
       nomeSalvo: nome,
       telefoneSalvo: numero,
+      emailSalvo: email,
     }
     ]);
   };
@@ -41,6 +43,16 @@ export default function Main(){
             onChange={(event)=> setNumero(event.target.value)}
             />
             {numero}
+
+          <label htmlFor="email"> Email:</label>
+            <input
+            type="text"
+            name="email-contato" 
+            id="email"
+            value={email}
+            onChange={(event)=> setEmail(event.target.value)}
+            />
+            {email}
             <button>Enviar</button>
 
          </div>
