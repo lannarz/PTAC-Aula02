@@ -16,6 +16,11 @@ export default function Main(){
     }
     ]);
   };
+  //inicio da função para deletar
+  const deletar = (index) => {
+     
+  }
+
     console.table(listaContatos)
     return(
       <main>
@@ -31,7 +36,6 @@ export default function Main(){
             value={nome}
             onChange={(event)=> setNome(event.target.value)}
             />
-            {nome}
          
          
           <label htmlFor="telefone"> Telefone:</label>
@@ -42,7 +46,6 @@ export default function Main(){
             value={numero}
             onChange={(event)=> setNumero(event.target.value)}
             />
-            {numero}
 
           <label htmlFor="email"> Email:</label>
             <input
@@ -52,12 +55,21 @@ export default function Main(){
             value={email}
             onChange={(event)=> setEmail(event.target.value)}
             />
-            {email}
             <button>Enviar</button>
 
          </div>
-          
+
         </form>
+
+        {listaContatos.map((contato, index)=> 
+        <div key={index}>
+          <p>{contato.nomeSalvo}</p>
+          <p>{contato.telefoneSalvo}</p>
+          <p>{contato.emailSalvo}</p>
+          <button onClick={deletar}>Excluir</button>
+        </div>
+        )}
+
 
         
       </main>
