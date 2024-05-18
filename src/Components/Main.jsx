@@ -1,7 +1,8 @@
 import { useState } from "react";
 
+
 export default function Main(){
-  const[nome, setNome] = useState("") //(0) number  // (true) boolean
+  const[nome, setNome] = useState("") //(0) or ( ) number  // (true) boolean
   const[numero, setNumero] = useState(0)
   const[email, setEmail] = useState("") 
   const[listaContatos, setListaContatos] = useState([])
